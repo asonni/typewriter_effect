@@ -63,4 +63,11 @@ function init() {
   const wait = txtElement.getAttribute('data-wait');
   // Init TypeWriter
   new TypeWriter(txtElement, words, wait);
+  // Init Countdown Timer
+  $('.countdown-clock').FlipClock(new Date('Oct 29, 2018'), {
+    // Countdown clock your options here
+    clockFace: 'DailyCounter',
+    countdown: true,
+    autoStart: true
+  });
 }
