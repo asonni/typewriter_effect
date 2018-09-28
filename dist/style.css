@@ -36,6 +36,12 @@ h2 {
   border-right: 0.2rem solid #777;
 }
 
+.flip-clock-label {
+  font-weight: 200;
+  font-size: 24px;
+  color: #aaa !important;
+}
+
 @media (min-width: 1200px) {
   h1 {
     font-size: 3.5rem;
@@ -50,6 +56,11 @@ h2 {
   h1 {
     font-size: 2.5rem;
   }
+
+  .flip-clock-label {
+    font-size: 0px;
+    color: #000 !important;
+  }
 }
 
 @media (max-width: 500px) {
@@ -60,15 +71,17 @@ h2 {
   h2 {
     font-size: 0.5rem;
   }
+
+  .flip-clock-label {
+    font-size: 0px;
+    color: #000 !important;
+  }
 }
 
-.countdown-clock {
-  margin-left: 30%;
-  /* margin-left: 2rem; */
-}
-.flip-clock-label {
-  color: #aaa !important;
-  font-size: 24px;
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .flip-clock-divider.days .flip-clock-label {
@@ -85,4 +98,16 @@ h2 {
 
 .flip-clock-divider.seconds .flip-clock-label {
   right: -115px;
+}
+
+.flip-clock-wrapper .flip {
+  height: Zpx;
+  width: Ypx;
+}
+.flip-clock-wrapper .flip a div {
+  height: 49%;
+}
+.flip-clock-wrapper .flip .inn {
+  font-size: xx;
+  line-height: yy;
 }
