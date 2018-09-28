@@ -58,13 +58,16 @@ document.addEventListener('DOMContentLoaded', init);
 
 // Init App
 function init() {
+  const now = new Date();
+  const date = new Date('October 29, 2018');
+  const diff = date.getTime() / 1000 - now.getTime() / 1000;
   const txtElement = document.querySelector('.txt-type');
   const words = JSON.parse(txtElement.getAttribute('data-words'));
   const wait = txtElement.getAttribute('data-wait');
   // Init TypeWriter
   new TypeWriter(txtElement, words, wait);
   // Init Countdown Timer
-  $('.countdown-clock').FlipClock(new Date('Oct 29, 2018'), {
+  $('.countdown-clock').FlipClock(diff, {
     // Countdown clock your options here
     clockFace: 'DailyCounter',
     countdown: true,
